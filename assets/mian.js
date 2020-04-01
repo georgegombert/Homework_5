@@ -14,5 +14,9 @@ setInterval(function(){
 for(var i=0; i<24; i++){
     const hourDivNode = $("<div>");
     hourDivNode.attr({"class" : "hour-div", "data-hour" : i});
+    let hourMark = m.set({'hour': i, 'minute': 0, 'second': 0});
+    hourMark = hourMark.format('h[:]mm a');
+    hourDivNode.text(hourMark);
     hourContainerNode.append(hourDivNode);
 }
+
