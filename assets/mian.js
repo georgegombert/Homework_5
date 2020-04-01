@@ -10,7 +10,7 @@ setInterval(function(){
     $("#dateHeading").text(currentTime);
 },1000);
 
-// creating divs to hold calendar events
+// Creating divs to hold calendar events
 for(var i=0; i<24; i++){
     const hourDivNode = $("<div>");
     hourDivNode.attr({"class" : "hour-div", "data-hour" : i});
@@ -19,4 +19,3 @@ for(var i=0; i<24; i++){
     hourDivNode.text(hourMark);
     hourContainerNode.append(hourDivNode);
 }
-

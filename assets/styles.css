@@ -19,6 +19,7 @@ body{
 
 .button{
     background-color: rgb(134, 46, 185);
+    transition: .2s;
     border: none;
     border-radius: 5px;
     color: rgb(245, 245, 245);
@@ -27,6 +28,28 @@ body{
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
+    outline: none;
+}
+
+.button:target{
+    outline: none;
+    background-color: rgb(134, 46, 185);
+}
+
+.button:hover{
+    background-color: rgb(161, 74, 211);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.button:focus{
+    outline: none;
+    background-color: rgb(134, 46, 185);
+}
+
+.button:active{
+    background-color: rgb(134, 46, 185);
+    outline: none;
 }
 
 
