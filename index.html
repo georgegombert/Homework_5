@@ -20,7 +20,34 @@
         </span>
     </div>
 
-    <div class="container" id="hourContainer"></div>
+    <!-- hour divs created from js code then statically coppied (see bottom of js file) -->
+    <div class="container" id="hourContainer">
+        <div class="hour-div" id="hourDiv" data-hour="0">12:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="1">1:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="2">2:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="3">3:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="4">4:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="5">5:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="6">6:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="7">7:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="8">8:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="9">9:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="10">10:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="11">11:00 am</div>
+        <div class="hour-div" id="hourDiv" data-hour="12">12:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="13">1:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="14">2:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="15">3:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="16">4:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="17">5:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="18">6:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="19">7:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="20">8:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="21">9:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="22">10:00 pm</div>
+        <div class="hour-div" id="hourDiv" data-hour="23">11:00 pm</div>
+    </div>
+    <!-- end hour divs  -->
 
     <!-- Modal -->
     <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
@@ -36,14 +63,14 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="EventName">Event Name</label>
-                            <input type="text" class="form-control" id="EventName" placeholder="Name">
+                            <label for="eventName">Event Name</label>
+                            <input type="text" class="form-control" id="eventName" placeholder="Name">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputMinute">Start Time</label>
-                                <label for="inputHour"></label>
-                                <select id="inputHour" class="form-control">
+                                <label for="startMinute">Start Time</label>
+                                <label for="startHour"></label>
+                                <select id="startHour" class="form-control">
                                     <option selected>Hour</option>
                                     <option>12 Am</option>
                                     <option>1  Am</option>
@@ -70,7 +97,7 @@
                                     <option>10 PM</option>
                                     <option>11 PM</option>
                                 </select>
-                                <select id="inputMinute" class="form-control">
+                                <select id="startMinute" class="form-control">
                                     <option selected>Minute</option>
                                     <option>00</option>
                                     <option>05</option>
@@ -87,9 +114,9 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputMinute">End Time</label>
-                                <label for="inputHour"></label>
-                                <select id="inputHour" class="form-control">
+                                <label for="endMinute">End Time</label>
+                                <label for="endHour"></label>
+                                <select id="endHour" class="form-control">
                                     <option selected>Hour</option>
                                     <option>12 Am</option>
                                     <option>1  Am</option>
@@ -116,7 +143,7 @@
                                     <option>10 PM</option>
                                     <option>11 PM</option>
                                 </select>
-                                <select id="inputMinute" class="form-control">
+                                <select id="endMinute" class="form-control">
                                     <option selected>Minute</option>
                                     <option>00</option>
                                     <option>05</option>
@@ -141,7 +168,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Add Event</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="eventButton">Add Event</button>
                 </div>
             </div>
         </div>
