@@ -3,7 +3,8 @@ let m = moment();
 const dateDisplay = m.format("[Today is ]dddd [the ] Do [of] MMMM");
 let currentTime = m.format("[The current time is] h[:]m[:]s[ ]a");
 const hourContainerNode = $("#hourContainer");
-let hourDivNode = $("#hourDiv");
+let hourDivNode = $(".hour-div");
+console.log(hourDivNode);
 //Initializing moment.js
 
 //creating array storage from user input in modal
@@ -34,6 +35,9 @@ $("#eventButton").click(function(){
     })
     console.log(events);
     printEvents();
+    
+    //save new event in local storage
+    localStorage.setItem("events", events);
 })
 
 
